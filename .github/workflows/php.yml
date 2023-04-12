@@ -29,7 +29,7 @@ jobs:
 
       - name: Install Dependencie
         run: composer install
-        working-directory: /bin/bash
+        working-directory: /usr/bin/bash
 
       # - name: Run Tests
       #   run: vendor/bin/phpunit
