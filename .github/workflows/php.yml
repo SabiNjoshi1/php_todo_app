@@ -27,7 +27,7 @@ jobs:
           curl -sS https://getcomposer.org/installer | php
           mv composer.phar /usr/local/bin/composer
 
-      - name: Install Dependencies
+      - name: Install Dependencie
         run: composer install
         working-directory: /Desktop/php_todo_app/
 
