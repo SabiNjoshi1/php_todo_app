@@ -32,7 +32,7 @@ jobs:
         #working-directory: /Users/bikashjoshi/Desktop/php_todo_app
 
       - name: Test for PHP
-        run: php_todo_app/phpunit tests
+        run: php_todo_app/phpunit tests/
       # - name: Run Tests
       #   run: vendor/bin/phpunit
 
