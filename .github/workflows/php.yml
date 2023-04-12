@@ -1,0 +1,44 @@
+name: PHP Composer
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["login"]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.0"
+          extensions: mbstring, pdo_mysql, curl, zip
+
+      - name: Install Composer
+        run: |
+          curl -sS https://getcomposer.org/installer | php
+          mv composer.phar /usr/local/bin/composer
+
+      - name: Install Dependencies
+        run: composer install
+        working-directory: /Desktop/php_todo_app/
+
+      # - name: Run Tests
+      #   run: vendor/bin/phpunit
+
+      # - name: Build Application
+      #   run: composer build
+
+    # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
+    # Docs: https://getcomposer.org/doc/articles/scripts.md
+
+    # - name: Run test suite
+    #   run: composer run-script test
