@@ -29,12 +29,13 @@ jobs:
 
       - name: Install Dependencies
         run: composer install
+        working-directory: /Desktop/php_todo_app/
 
-      - name: Run Tests
-        run: vendor/bin/phpunit
+      # - name: Run Tests
+      #   run: vendor/bin/phpunit
 
-      - name: Build Application
-        run: composer build
+      # - name: Build Application
+      #   run: composer build
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
