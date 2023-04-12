@@ -29,8 +29,10 @@ jobs:
 
       - name: Install Dependencies
         run: composer install
-        working-directory: /Users/bikashjoshi/Desktop/php_todo_app
+        #working-directory: /Users/bikashjoshi/Desktop/php_todo_app
 
+      - name: Test for PHP
+        run: php_todo_app/phpunit tests
       # - name: Run Tests
       #   run: vendor/bin/phpunit
 
