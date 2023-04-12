@@ -22,14 +22,17 @@ jobs:
           php-version: "8.0"
           extensions: mbstring, pdo_mysql, curl, zip
 
-      - name: Install Composer
-        run: |
-          curl -sS https://getcomposer.org/installer | php
-          mv composer.phar /usr/local/bin/composer
+      # - name: Install Composer
+      #   run: |
+      #     curl -sS https://getcomposer.org/installer | php
+      #     mv composer.phar /usr/local/bin/composer
 
-      - name: Install Dependencies
-        run: composer install
-        working-directory: /Desktop/php_todo_app
+      # - name: Install Dependencies
+      #   run: composer install
+      #   # working-directory: /Desktop/php_todo_app
+
+      # - name: testing php
+      #   run: php_todo_app/phpunit tests/
 
       # - name: Run Tests
       #   run: vendor/bin/phpunit
